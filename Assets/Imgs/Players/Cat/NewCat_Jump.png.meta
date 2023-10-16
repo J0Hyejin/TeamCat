@@ -26,6 +26,12 @@ TextureImporter:
   - first:
       213: -4271266413393632287
     second: NewCat_Jump_7
+  - first:
+      213: -2707562746321121845
+    second: NewCat_Jump_8
+  - first:
+      213: -2804826309255403741
+    second: NewCat_Jump_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -278,6 +284,48 @@ TextureImporter:
       bones: []
       spriteID: 1e3ad90c3d969b4c0800000000000000
       internalID: -4271266413393632287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCat_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 36
+        width: 144
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcdc27a070ecc6ad0800000000000000
+      internalID: -2707562746321121845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewCat_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 38
+        width: 146
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327692415514319d0800000000000000
+      internalID: -2804826309255403741
       vertices: []
       indices: 
       edges: []

@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm_: {fileID: 0}
-  jumpForce: 5
+  jumpForce: 5.3
 --- !u!95 &835065632
 Animator:
   serializedVersion: 3
