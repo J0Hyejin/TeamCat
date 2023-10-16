@@ -10,10 +10,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject           diedPanel;
 
-    Vector3                    dirr = new Vector3(0, 0, 0);
+    Vector3                    dirr = new Vector3(-1, 0, 0);
     
     [SerializeField]
-    float                        speed = 12;
+    float  speed = 12;
     [SerializeField]
     float addSpeed = 0.2f;
     [SerializeField]
