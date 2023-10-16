@@ -12,11 +12,13 @@ public class PlayerController : MonoBehaviour
     Vector3 dirr = Vector3.zero;
 
     [SerializeField]
-    float jumpForce = 4.5f;
+    float jumpForce = 5.3f;
 
     int maxJump = 2;
     int currentJump = 0;
     int health = 3;
+
+    bool isJump;
 
     AudioSource playSound;
 
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour
                         ani_.SetTrigger("Double");
                     currentJump++;
                     rigid_.velocity = jumpD * jumpForce;
+                    isJump = true;
                 }
             }
         }
@@ -81,7 +84,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            rigid_.gravityScale = 2.0f;
+            rigid_.gravityScale = 2.5f;
         }
     }
 
@@ -91,7 +94,12 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Land"))
         {
             //ani_.SetBool("Jump", false);
-            ani_.SetTrigger("Landing");
+            if (isJump)
+            {
+                ani_.SetTrigger("Land");
+                isJump = false;
+                ani_.SetTrigger("Walk");
+            }
             currentJump = 0;
         }
     }
