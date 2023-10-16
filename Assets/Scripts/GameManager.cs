@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     float addSpeed = 0.2f;
     [SerializeField]
     float addTime = 0.5f;
+    [SerializeField]
     float gameSpeed = 1;
 
     private void Start()
