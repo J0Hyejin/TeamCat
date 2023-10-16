@@ -10,13 +10,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject           diedPanel;
 
-    public TextMeshProUGUI   hp_;
-    public TextMeshProUGUI   deadTxt;
-    [SerializeField]
-    GameObject             mouse_;
-    [SerializeField]
-    GameObject             dog_;
-
     Vector3                    dirr = new Vector3(0, 0, 0);
     
     [SerializeField]
@@ -65,12 +58,6 @@ public class GameManager : MonoBehaviour
 
     public void ReStart()
     {
-        if(SceneManager.GetActiveScene().name == "Tutorial")
-        {
-            Debug.Log("Turorial Reset");
-            SceneManager.LoadScene("Tutorial");
-
-        }
         
     }
 
