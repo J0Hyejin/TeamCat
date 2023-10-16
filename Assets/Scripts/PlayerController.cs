@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour
             //slider_.value++; 스테이지 넘어감s??
         }
 
+        /*
         if (collision.gameObject.CompareTag("Spike"))
         {
             //slider_.value--;  장애물에 맞음
@@ -131,5 +132,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Fallen!");
             gm_.GetComponent<GameManager>().OnFall();
         }
+        */
     }
 }
