@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     Vector3 dirr = Vector3.zero;
 
     [SerializeField]
-    float jumpForce = 4.5f;
+    float jumpForce = 5.3f;
 
     int maxJump = 2;
     int currentJump = 0;
