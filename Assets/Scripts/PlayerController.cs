@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            rigid_.gravityScale = 2.0f;
+            rigid_.gravityScale = 2.5f;
         }
     }
 
