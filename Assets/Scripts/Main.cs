@@ -5,10 +5,11 @@ public class Main : MonoBehaviour
 {
     public GameObject optionPanel;
     public GameObject howToPanel;
+    public GameObject stageSelect;
 
     public void GameStartButton()
     {
-        SceneManager.LoadScene("HYJ");
+        stageSelect.SetActive(true);
     }
 
     public void HowToPlay()
@@ -19,11 +20,6 @@ public class Main : MonoBehaviour
     public void CloseHowToPlay()
     {
         howToPanel.SetActive(false);
-    }
-
-    public void Tutorial()
-    {
-        SceneManager.LoadScene("Tu");
     }
 
     public void Option()
