@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     int currentJump = 0;
     int health = 3;
 
+    bool isJump;
+
     AudioSource playSound;
 
     private void Start()
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour
                         ani_.SetTrigger("Double");
                     currentJump++;
                     rigid_.velocity = jumpD * jumpForce;
+                    isJump = true;
                 }
             }
         }
@@ -91,7 +94,12 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Land"))
         {
             //ani_.SetBool("Jump", false);
-            ani_.SetTrigger("Landing");
+            if (isJump)
+            {
+                ani_.SetTrigger("Land");
+                isJump = false;
+                ani_.SetTrigger("Walk");
+            }
             currentJump = 0;
         }
     }
