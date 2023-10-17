@@ -26,6 +26,20 @@ public class Main : MonoBehaviour
         Application.Quit();
     }
 
+    IEnumerator OnMove(Vector3 start, Vector3 end, GameObject obj)
+    {
+        float current = 0;
+        float percent = 0;
 
+        while(percent < 1)
+        {
+            current += Time.deltaTime;
+            percent = current / appearTIme;
+
+            obj.GetComponent<Transform>().position = Vector3.Lerp(start, end, curveMove.Evaluate(percent));
+
+            yield return null;
+        }
+    }
 
 }
