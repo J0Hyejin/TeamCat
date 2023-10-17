@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Sound/사운드 최종/c.meta
 guid: 78cd8429c04d843459cc6740976046c2
 folderAsset: yes
+=======
+guid: cc6a13699e09a5f47b7b2ff2e19dbe73
+>>>>>>> Stashed changes:Assets/Scenes/StageTest(HYJ_HARD).unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

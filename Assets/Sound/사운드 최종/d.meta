@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Sound/사운드 최종/d.meta
 guid: 951ac085a8cf9f54985e2edaf3c8fd3b
 folderAsset: yes
+=======
+guid: c739bb8d93c73b449845181160530096
+>>>>>>> Stashed changes:Assets/Scenes/Stage3.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

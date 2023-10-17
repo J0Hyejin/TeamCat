@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     AudioSource playSound;
 
+    int playerLayer, boardLayer;
+
     private void Start()
     {
         rigid_ = GetComponent<Rigidbody2D>();
@@ -27,6 +29,10 @@ public class PlayerController : MonoBehaviour
         health = 3;
         //slider_.value = 3;
         playSound = GetComponent<AudioSource>();
+
+        playerLayer = LayerMask.NameToLayer("Player");
+        boardLayer = LayerMask.NameToLayer("Board");
+
     }
 
     private void Update()
@@ -46,6 +52,11 @@ public class PlayerController : MonoBehaviour
                     rigid_.velocity = jumpD * jumpForce;
                 }
             }
+            // 점프 발판 통과해서 착지
+            if(rigid_.velocity.y > 0)
+                Physics2D.IgnoreLayerCollision(playerLayer, boardLayer, true);
+            else
+                Physics2D.IgnoreLayerCollision(playerLayer, boardLayer, false);
         }
         else
         {
