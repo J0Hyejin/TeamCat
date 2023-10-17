@@ -106,12 +106,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        /*
         if (collision.gameObject.CompareTag("Next"))
         {
             //slider_.value++; 스테이지 넘어감s??
         }
 
-        /*
         if (collision.gameObject.CompareTag("Spike"))
         {
             //slider_.value--;  장애물에 맞음
