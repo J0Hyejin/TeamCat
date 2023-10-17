@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject           diedPanel;
 
     Vector3                    dirr = new Vector3(-1, 0, 0);
+
+    bool flag = false;
     
     [SerializeField]
     float  speed = 12;
@@ -35,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
 
         GameMap.transform.Translate(dirr * speed * Time.fixedDeltaTime);
-
+        StartCoroutine("AddSpeed");
 
     }
 
@@ -64,8 +66,15 @@ public class GameManager : MonoBehaviour
 
     IEnumerator AddSpeed()
     {
-        yield return new WaitForSeconds(addTime);
-        gameSpeed += addSpeed;
-        Time.timeScale = gameSpeed;
+        if (!flag)
+        {
+            flag = true;
+            yield return new WaitForSeconds(addTime);
+            gameSpeed += addSpeed;
+            Time.timeScale = gameSpeed;
+            Debug.Log("Add speed, Now Speed: "+ gameSpeed);
+            flag = false;
+        }
+
     }
 }

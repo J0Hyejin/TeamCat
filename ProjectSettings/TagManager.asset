@@ -7,6 +7,7 @@ TagManager:
   - Land
   - Dead
   - Soul
+  - Wall
   layers:
   - Default
   - TransparentFX
