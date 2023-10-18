@@ -855,10 +855,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameMap: {fileID: 1534144636}
   diedPanel: {fileID: 0}
-  speed: 9
-  addSpeed: 0.2
-  addTime: 0.5
-  gameSpeed: 1
+  speed: 12
+  addSpeed: 0.15
+  addTime: 30
 --- !u!4 &658893048
 Transform:
   m_ObjectHideFlags: 0
