@@ -1367,18 +1367,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameMap: {fileID: 1534144636}
-<<<<<<< Updated upstream
-  diedPanel: {fileID: 0}
-  speed: 5.3
-  addSpeed: 0
-  addTime: 0
-=======
   FinishPanel: {fileID: 696878804}
   diedPanel: {fileID: 542820090}
   speed: 12
   addSpeed: 0.15
   addTime: 30
->>>>>>> Stashed changes
 --- !u!4 &658893048
 Transform:
   m_ObjectHideFlags: 0
