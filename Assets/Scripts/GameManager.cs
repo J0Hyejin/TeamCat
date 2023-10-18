@@ -64,8 +64,20 @@ public class GameManager : MonoBehaviour
 
     IEnumerator AddSpeed()
     {
+<<<<<<< Updated upstream
         yield return new WaitForSeconds(addTime);
         gameSpeed += addSpeed;
         Time.timeScale = gameSpeed;
+=======
+        if (!flag)
+        {
+            flag = true;
+            yield return new WaitForSeconds(addTime);
+            gameSpeed += addSpeed;
+            Time.timeScale = gameSpeed;
+            Debug.Log("Add speed, Now Speed: "+ gameSpeed);
+            flag = false;
+        }
+>>>>>>> Stashed changes
     }
 }

@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Imgs/BG/Clouds 1/Materials.meta
 guid: c08005c91c82ea34db67a71b0ae2ba99
 folderAsset: yes
 DefaultImporter:
+=======
+guid: 255445e7e0f6c7c4485b6a8e0c6e60e8
+PrefabImporter:
+>>>>>>> Stashed changes:Assets/Prefabs/FlyObject.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
