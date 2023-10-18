@@ -63,10 +63,10 @@ public class GameManager : MonoBehaviour
         switch (cleardLv)
         {
             case 1:
-                SceneManager.LoadScene("Stage1");
+                SceneManager.LoadScene("Stage1(LYS)");
                 break;
             case 2:
-                SceneManager.LoadScene("Stage2");
+                SceneManager.LoadScene("Stage2(HYJ)");
                 break;
             case 3:
                 SceneManager.LoadScene("Stage3");
@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
     public void LevelClear()
     {
         FinishPanel.SetActive(true);
+        Time.timeScale = 0;
         if(cleardLv == 3)
         {
             //compare orbs. 
