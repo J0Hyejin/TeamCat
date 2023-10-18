@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  pigeonPrefab: {fileID: 6938295421296436513, guid: 255445e7e0f6c7c4485b6a8e0c6e60e8, type: 3}
+  pigeonPrefab: {fileID: 6938295421296436513, guid: c97f0ac87b3f53d4aa3c4ea30deb7b72, type: 3}
   flightPositions: []
 --- !u!61 &6848924713680433228
 BoxCollider2D:
