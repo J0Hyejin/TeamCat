@@ -66,15 +66,12 @@ public class Main : MonoBehaviour
         Application.Quit();
     }
 
-<<<<<<< Updated upstream
 
-=======
     public void OnAppear(int pan)
     {
         panels[pan].transform.localPosition = onPoz;
 
     }
->>>>>>> Stashed changes
 
     public void Dissappear(int pan)
     {

@@ -106,38 +106,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-<<<<<<< Updated upstream
-        if (collision.gameObject.CompareTag("Next"))
-=======
         if (collision.gameObject.CompareTag("Dead"))
->>>>>>> Stashed changes
         {
             Debug.Log("Dead");
             gm_.GetComponent<GameManager>().OnDead();
         }
-<<<<<<< Updated upstream
-
-        if (collision.gameObject.CompareTag("Spike"))
-        {
-            //slider_.value--;  장애물에 맞음
-            Debug.Log("Ouch!");
-            health--;
-        }
-
-        if (collision.gameObject.CompareTag("People"))
-        {
-            //인간이나 개랑 닿음
-            Debug.Log("Human touched");
-            gm_.GetComponent<GameManager>().OnPeopel();
-        }
-
-        if (collision.gameObject.CompareTag("Fall"))
-        {
-            //낙사 판정
-            Debug.Log("Fallen!");
-            gm_.GetComponent<GameManager>().OnFall();
-        }
-=======
->>>>>>> Stashed changes
     }
 }

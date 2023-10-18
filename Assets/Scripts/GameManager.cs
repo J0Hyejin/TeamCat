@@ -9,14 +9,10 @@ public class GameManager : MonoBehaviour
     GameObject             GameMap;
 
     public GameObject     diedPanel;
-
-<<<<<<< Updated upstream
     Vector3                    dirr = new Vector3(-1, 0, 0);
-=======
-    Vector3                  dirr = new Vector3(-1, 0, 0);
 
     bool flag = false;
->>>>>>> Stashed changes
+
     
     [SerializeField]
     float  speed = 12;
@@ -34,12 +30,7 @@ public class GameManager : MonoBehaviour
     private void FixedUpdate()
     {
         GameMap.transform.Translate(dirr * speed * Time.fixedDeltaTime);
-<<<<<<< Updated upstream
-
-
-=======
         StartCoroutine("AddSpeed");
->>>>>>> Stashed changes
     }
 
 
@@ -61,11 +52,9 @@ public class GameManager : MonoBehaviour
 
     IEnumerator AddSpeed()
     {
-<<<<<<< Updated upstream
         yield return new WaitForSeconds(addTime);
         gameSpeed += addSpeed;
         Time.timeScale = gameSpeed;
-=======
         if (!flag)
         {
             flag = true;
@@ -75,6 +64,5 @@ public class GameManager : MonoBehaviour
             Debug.Log("Add speed, Now Speed: "+ gameSpeed);
             flag = false;
         }
->>>>>>> Stashed changes
     }
 }
