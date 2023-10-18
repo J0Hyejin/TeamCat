@@ -5,8 +5,12 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public AudioSource musicsource;
+    void Start()
+    {
 
-    public void SetMusicVolume(float vloume)
+        DontDestroyOnLoad(transform.gameObject);
+    }
+        public void SetMusicVolume(float vloume)
     {
         musicsource.volume = vloume;
     }
