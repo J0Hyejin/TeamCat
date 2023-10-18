@@ -106,10 +106,16 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+<<<<<<< Updated upstream
         if (collision.gameObject.CompareTag("Next"))
+=======
+        if (collision.gameObject.CompareTag("Dead"))
+>>>>>>> Stashed changes
         {
-            //slider_.value++; 스테이지 넘어감s??
+            Debug.Log("Dead");
+            gm_.GetComponent<GameManager>().OnDead();
         }
+<<<<<<< Updated upstream
 
         if (collision.gameObject.CompareTag("Spike"))
         {
@@ -131,5 +137,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Fallen!");
             gm_.GetComponent<GameManager>().OnFall();
         }
+=======
+>>>>>>> Stashed changes
     }
 }
