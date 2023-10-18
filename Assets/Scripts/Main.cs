@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Main : MonoBehaviour
 {
     [SerializeField]
@@ -15,6 +15,14 @@ public class Main : MonoBehaviour
 
     public void OnGameStart()
     {
+        if (!PlayerPrefs.HasKey("NewBee"))
+        {
+            SceneManager.LoadScene("TutoCartoon");
+            PlayerPrefs.SetInt("NewBee", 1);
+        }
+        else if (PlayerPrefs.GetInt("cleardLv") == 0)
+            SceneManager.LoadScene("Tuto");
+
         Dissappear(0);
         OnAppear(1);
     }
