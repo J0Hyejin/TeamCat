@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     GameObject             GameMap;
+    public GameObject FinishPanel;
 
     public GameObject     diedPanel;
 
@@ -66,9 +67,32 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+    public void NextLevel()
+    {
+        switch (cleardLv)
+        {
+            case 1:
+                SceneManager.LoadScene("Stage1");
+                break;
+            case 2:
+                SceneManager.LoadScene("Stage2");
+                break;
+            case 3:
+                SceneManager.LoadScene("Stage3");
+                break;
+        }
+    }
+
     public void LevelClear()
     {
-
+        FinishPanel.SetActive(true);
+        if(cleardLv == 3)
+        {
+            //compare orbs. 
+        }
+        else
+            cleardLv++;
+        PlayerPrefs.SetInt("cleardLv", cleardLv);
     }
 
     IEnumerator AddSpeed()
