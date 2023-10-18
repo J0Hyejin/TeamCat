@@ -553,11 +553,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f24b6c327b6a18458df0f0a5e435f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameMap: {fileID: 1534144636}
+  GameMap: {fileID: 0}
   diedPanel: {fileID: 0}
   speed: 12
-  addSpeed: 0.2
-  addTime: 0.5
+  addSpeed: 0
+  addTime: 50
   gameSpeed: 1
 --- !u!4 &658893048
 Transform:

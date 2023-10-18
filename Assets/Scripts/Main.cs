@@ -1,45 +1,83 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
     [SerializeField]
-    AnimationCurve curveMove;
+    GameObject[] panels; //MainButton, GameStart, HowToPlay, Gallery, Option
 
-    float appearTIme = 0.5f;
+    Vector3 onPoz = new Vector3(0, -80, 0);
+    Vector3 offPoz = new Vector3(0, -1120, 0);
 
-    Vector3 upPoz = new Vector3(0, -110, 0);
-    Vector3 downPoz = new Vector3(0, -1150, 0);
+    private void Start()
+    {
+        OnAppear(0);
+    }
 
-    public GameObject mainPanel;
-    public GameObject optionPanel;
-    public GameObject howToPanel;
-    public GameObject levelPanel;
-    public GameObject galleryPanel;
+    public void OnGameStart()
+    {
+        Dissappear(0);
+        OnAppear(1);
+    }
 
+    public void OffGameStart()
+    {
+        Dissappear(1);
+        OnAppear(0);
+    }
 
+    public void OnHow()
+    {
+        Dissappear(0);
+        OnAppear(2);
+    }
 
+    public void OffHow()
+    {
+        Dissappear(2);
+        OnAppear(0);
+    }
 
-    public void gameExit()
+    public void OnGallery()
+    {
+        Dissappear(0);
+        OnAppear(3);
+    }
+
+    public void OffGallery()
+    {
+        Dissappear(3);
+        OnAppear(0);
+    }
+
+    public void OnOption()
+    {
+        Dissappear(0);
+        OnAppear(4);
+    }
+
+    public void OffOption()
+    {
+        Dissappear(4);
+        OnAppear(0);
+    }
+
+    public void OnExit()
     {
         Application.Quit();
     }
 
-    IEnumerator OnMove(Vector3 start, Vector3 end, GameObject obj)
+<<<<<<< Updated upstream
+
+=======
+    public void OnAppear(int pan)
     {
-        float current = 0;
-        float percent = 0;
+        panels[pan].transform.localPosition = onPoz;
 
-        while(percent < 1)
-        {
-            current += Time.deltaTime;
-            percent = current / appearTIme;
-
-            obj.GetComponent<Transform>().position = Vector3.Lerp(start, end, curveMove.Evaluate(percent));
-
-            yield return null;
-        }
     }
+>>>>>>> Stashed changes
 
+    public void Dissappear(int pan)
+    {
+        panels[pan].transform.localPosition = offPoz;
+    }
 }

@@ -22,8 +22,6 @@ public class PlayerController : MonoBehaviour
 
     AudioSource playSound;
 
-    int playerLayer, boardLayer;
-
     private void Start()
     {
         rigid_ = GetComponent<Rigidbody2D>();
@@ -31,10 +29,6 @@ public class PlayerController : MonoBehaviour
         health = 3;
         //slider_.value = 3;
         playSound = GetComponent<AudioSource>();
-
-        playerLayer = LayerMask.NameToLayer("Player");
-        boardLayer = LayerMask.NameToLayer("Board");
-
     }
 
     private void Update()
@@ -55,11 +49,6 @@ public class PlayerController : MonoBehaviour
                     isJump = true;
                 }
             }
-            // 점프 발판 통과해서 착지
-            if(rigid_.velocity.y > 0)
-                Physics2D.IgnoreLayerCollision(playerLayer, boardLayer, true);
-            else
-                Physics2D.IgnoreLayerCollision(playerLayer, boardLayer, false);
         }
         else
         {
@@ -95,7 +84,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            rigid_.gravityScale = 2.5f;
+            rigid_.gravityScale = 2.0f;
         }
     }
 
@@ -117,11 +106,16 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*
+<<<<<<< Updated upstream
         if (collision.gameObject.CompareTag("Next"))
+=======
+        if (collision.gameObject.CompareTag("Dead"))
+>>>>>>> Stashed changes
         {
-            //slider_.value++; 스테이지 넘어감s??
+            Debug.Log("Dead");
+            gm_.GetComponent<GameManager>().OnDead();
         }
+<<<<<<< Updated upstream
 
         if (collision.gameObject.CompareTag("Spike"))
         {
@@ -143,6 +137,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Fallen!");
             gm_.GetComponent<GameManager>().OnFall();
         }
-        */
+=======
+>>>>>>> Stashed changes
     }
 }
