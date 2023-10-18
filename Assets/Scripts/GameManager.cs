@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
 =======
     Vector3                  dirr = new Vector3(-1, 0, 0);
 
+    int cleardLv = 0;
+    int[] orbs;
+
     bool flag = false;
 >>>>>>> Stashed changes
     
@@ -29,6 +32,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        if (PlayerPrefs.HasKey("cleardLv"))
+            cleardLv = PlayerPrefs.GetInt("cleardLv");
+        else
+            cleardLv = 0;
     }
 
     private void FixedUpdate()
@@ -57,6 +64,11 @@ public class GameManager : MonoBehaviour
     public void GoMain()
     {
         SceneManager.LoadScene("MainScene");
+    }
+
+    public void LevelClear()
+    {
+
     }
 
     IEnumerator AddSpeed()

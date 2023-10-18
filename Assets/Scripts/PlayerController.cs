@@ -116,6 +116,7 @@ public class PlayerController : MonoBehaviour
             gm_.GetComponent<GameManager>().OnDead();
         }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
         if (collision.gameObject.CompareTag("Spike"))
         {
@@ -138,6 +139,14 @@ public class PlayerController : MonoBehaviour
             gm_.GetComponent<GameManager>().OnFall();
         }
 =======
+>>>>>>> Stashed changes
+=======
+
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            Debug.Log("Level Clear");
+            gm_.GetComponent<GameManager>().LevelClear();
+        }
 >>>>>>> Stashed changes
     }
 }
