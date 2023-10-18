@@ -64,9 +64,6 @@ public class GameManager : MonoBehaviour
 
     IEnumerator AddSpeed()
     {
-        yield return new WaitForSeconds(addTime);
-        gameSpeed += addSpeed;
-        Time.timeScale = gameSpeed;
         if (!flag)
         {
             flag = true;
