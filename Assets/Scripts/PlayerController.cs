@@ -111,5 +111,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Dead");
             gm_.GetComponent<GameManager>().OnDead();
         }
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            Debug.Log("Level Clear");
+            gm_.GetComponent<GameManager>().LevelClear();
+        }
     }
 }
