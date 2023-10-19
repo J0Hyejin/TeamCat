@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tuto.unity
     guid: e5236443dc738cc44ba8a68880545bfe
+  - enabled: 1
+    path: Assets/Scenes/TutoCartoon.unity
+    guid: c18e7c94bb5d3e745a5c7999bcb98c36
+  - enabled: 1
+    path: Assets/Scenes/Stage1(LYS).unity
+    guid: 5fed7e0221084684db07a196580fdec3
+  - enabled: 1
+    path: Assets/Scenes/Stage2(HYJ).unity
+    guid: f3a307b713e622f469a071f973aeea84
   m_configObjects: {}
