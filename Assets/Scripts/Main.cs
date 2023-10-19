@@ -4,6 +4,8 @@ public class Main : MonoBehaviour
 {
     [SerializeField]
     GameObject[] panels; //MainButton, GameStart, HowToPlay, Gallery, Option
+    [SerializeField]
+    GameObject warning;
 
     Vector3 onPoz = new Vector3(0, -80, 0);
     Vector3 offPoz = new Vector3(0, -1120, 0);
@@ -85,4 +87,22 @@ public class Main : MonoBehaviour
     {
         panels[pan].transform.localPosition = offPoz;
     }
+
+    public void Warning()
+    {
+        warning.SetActive(true);
+    }
+
+    public void CloseWarn()
+    {
+        warning.SetActive(false);
+    }
+
+    public void GameReset()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("MainScene");
+    }
+
+    
 }
