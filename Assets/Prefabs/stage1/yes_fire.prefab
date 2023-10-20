@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2883072866056172568}
   - component: {fileID: 2883072866056172569}
   - component: {fileID: 2883072866056172570}
+  - component: {fileID: 2153284959287079663}
   m_Layer: 0
   m_Name: yes_fire
   m_TagString: Dead
@@ -91,13 +92,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2883072866056172583}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012866065, y: -0.0070333965}
+  m_Offset: {x: 0.0312554, y: -0.012780791}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,8 +109,24 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25426784, y: 0.14593321}
+  m_Size: {x: 0.21748917, y: 0.13443841}
   m_EdgeRadius: 0
+--- !u!70 &2153284959287079663
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2883072866056172583}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.07152347}
+  m_Size: {x: 0.15737072, y: 0.4054904}
+  m_Direction: 0
 --- !u!1 &2883072867544637272
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,13 +218,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2883072867544637272}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04790649, y: -0.08373955}
+  m_Offset: {x: 0.051385492, y: -0.14301851}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -218,7 +235,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.554187, y: 0.7225209}
+  m_Size: {x: 0.547229, y: 0.60396296}
   m_EdgeRadius: 0
 --- !u!95 &2883072867544637274
 Animator:

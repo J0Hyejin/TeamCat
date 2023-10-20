@@ -11,6 +11,9 @@ public class LevelManager : MonoBehaviour
     public GameObject rightButton;
     public GameObject warnPanel;
     public TextMeshProUGUI levelName;
+    public TextMeshProUGUI levelSoul;
+
+    int[] souls = new int[9] { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
     string[] lvNames = { "Tutorial", "Stage1", "Stage2", "Stage3" };
 
@@ -26,6 +29,16 @@ public class LevelManager : MonoBehaviour
             cleardLv = 0;
         Debug.Log("cleardLv" + cleardLv);
         leftButton.SetActive(false);
+
+
+        if(PlayerPrefs.HasKey("Soul"))
+        {
+            string[] temp = PlayerPrefs.GetString("Soul").Split(',');
+            for (int i = 0; i < 9; i++)
+                souls[i] = int.Parse(temp[i]);
+        }
+
+
     }
 
     public void LevelSelect()
@@ -71,6 +84,7 @@ public class LevelManager : MonoBehaviour
     {
         img.GetComponent<Image>().sprite = levels[nowLv];
         levelName.text = lvNames[nowLv];
+        ShowSouls();
         if (nowLv == 0)
             leftButton.SetActive(false);
         else
@@ -83,5 +97,25 @@ public class LevelManager : MonoBehaviour
             warnPanel.SetActive(true);
         else
             warnPanel.SetActive(false);
+    }
+
+    void ShowSouls()
+    {
+        switch (nowLv)
+        {
+            case 0:
+                levelSoul.text = souls[0] + "/ 1";
+                break;
+            case 1:
+                levelSoul.text = souls[1] + souls[2] + "/ 2";
+                break;
+            case 2:
+                levelSoul.text = souls[3] + souls[4] + souls[5] + "/ 3";
+                break;
+            case 3:
+                levelSoul.text = souls[6] + souls[7] + souls[8] + "/ 3";
+                break;
+
+        }
     }
 }

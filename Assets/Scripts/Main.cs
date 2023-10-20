@@ -1,18 +1,34 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class Main : MonoBehaviour
 {
     [SerializeField]
     GameObject[] panels; //MainButton, GameStart, HowToPlay, Gallery, Option
     [SerializeField]
     GameObject warning;
+    public TextMeshProUGUI soulsText;
+
 
     Vector3 onPoz = new Vector3(0, -80, 0);
     Vector3 offPoz = new Vector3(0, -1120, 0);
 
+    int souls;
+
     private void Start()
     {
         OnAppear(0);
+
+        string[] temp;
+        if (!PlayerPrefs.HasKey("Soul"))
+            souls = 0;
+        else
+        {
+            temp = PlayerPrefs.GetString("Soul").Split(',');
+            for (int i = 0; i < 9; i++)
+                souls += int.Parse(temp[i]);
+        }
+        soulsText.text = "Collected soul: " + souls;
     }
 
     public void OnGameStart()
@@ -104,5 +120,10 @@ public class Main : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+    public void GoTutoScene()
+    {
+        if(PlayerPrefs.HasKey("TutoWatched"))
+            SceneManager.LoadScene("TutoCartoon");
+    }
     
 }

@@ -19,5 +19,11 @@ EditorBuildSettings:
     guid: 5fed7e0221084684db07a196580fdec3
   - enabled: 1
     path: Assets/Scenes/Stage2(HYJ).unity
-    guid: f3a307b713e622f469a071f973aeea84
+    guid: 55d45f1609b32df49b4ee030eb3d3a9c
+  - enabled: 1
+    path: Assets/Scenes/Stage3.unity
+    guid: e4ecd69c024477e4eb1fba5bee184897
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     int health = 3;
 
     bool isJump;
+    bool isSuper;
 
     AudioSource playSound;
 
@@ -33,8 +34,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (health > 0)
-        {
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
             {
                 if (currentJump <2)
@@ -49,13 +48,15 @@ public class PlayerController : MonoBehaviour
                     isJump = true;
                 }
             }
-        }
-        else
-        {
-            Debug.Log("Dead");
-            ani_.SetTrigger("Dead");
-        }
 
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            if (!isSuper)
+                isSuper = true;
+            else
+                isSuper = false;
+            Debug.Log("Super mode is " + isSuper);
+        }
     }
 
 
@@ -102,19 +103,37 @@ public class PlayerController : MonoBehaviour
             }
             currentJump = 0;
         }
+        if (collision.gameObject.CompareTag("DeadLand"))
+        {
+            if (!isSuper)
+            {
+                Debug.Log("DeadLand");
+                gm_.GetComponent<GameManager>().OnDead();
+            }
+            else
+            {
+                if (isJump)
+                {
+                    ani_.SetTrigger("Land");
+                    isJump = false;
+                    ani_.SetTrigger("Walk");
+                }
+                currentJump = 0;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Dead"))
-        {
-            Debug.Log("Dead");
-            gm_.GetComponent<GameManager>().OnDead();
-        }
         if (collision.gameObject.CompareTag("Finish"))
         {
             Debug.Log("Level Clear");
             gm_.GetComponent<GameManager>().LevelClear();
+        }
+        if (collision.gameObject.CompareTag("Dead") && !isSuper)
+        {
+            Debug.Log("Dead");
+            gm_.GetComponent<GameManager>().OnDead();
         }
     }
 }

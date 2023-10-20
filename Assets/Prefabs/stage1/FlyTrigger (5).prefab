@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  pigeonPrefab: {fileID: 6938295421296436513, guid: c97f0ac87b3f53d4aa3c4ea30deb7b72, type: 3}
+  pigeonPrefab: {fileID: 507300060932338191, guid: 27c24f6f26678844e8afbe92e7e40f59, type: 3}
   flightPositions: []
 --- !u!61 &6848924713680433228
 BoxCollider2D:

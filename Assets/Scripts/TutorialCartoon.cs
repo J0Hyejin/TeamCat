@@ -56,17 +56,19 @@ public class TutorialCartoon : MonoBehaviour
         }
         cartoon[3].SetActive(true);
         yield return new WaitForSeconds(1.3f);
+       
         goTime();
     }
 
     void goTime()
     {
-        if (!PlayerPrefs.HasKey("TutoWatched"))
-        {
-            SceneManager.LoadScene("Tuto");
-            PlayerPrefs.SetInt("TutoWatched", 1);
-        }
-        else
-            SceneManager.LoadScene("MainScene");
+
+            if (!PlayerPrefs.HasKey("TutoWatched"))
+            {
+                SceneManager.LoadScene("Tuto");
+                PlayerPrefs.SetInt("TutoWatched", 1);
+            }
+            else
+                SceneManager.LoadScene("MainScene");
     }
 }
