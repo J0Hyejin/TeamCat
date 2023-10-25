@@ -18,6 +18,11 @@ public class Pause : MonoBehaviour
         isDead = gameManager.GetComponent<GameManager>().isDead;
         if (isDead)
             this.gameObject.SetActive(false);
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                OnPause();
+        }
     }
 
     public void OnPause()
