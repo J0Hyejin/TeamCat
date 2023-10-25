@@ -8,7 +8,12 @@ public class Main : MonoBehaviour
     [SerializeField]
     GameObject warning;
     public TextMeshProUGUI soulsText;
-
+    [SerializeField]
+    GameObject[] players; //player, land
+    [SerializeField]
+    GameObject space;
+    [SerializeField]
+    GameObject hand;
 
     Vector3 onPoz = new Vector3(0, -80, 0);
     Vector3 offPoz = new Vector3(0, -1120, 0);
@@ -29,6 +34,15 @@ public class Main : MonoBehaviour
                 souls += int.Parse(temp[i]);
         }
         soulsText.text = "Collected soul: " + souls;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            space.GetComponent<Animator>().SetTrigger("space");
+            hand.GetComponent<Animator>().SetTrigger("space");
+        }
     }
 
     public void OnGameStart()
@@ -55,12 +69,16 @@ public class Main : MonoBehaviour
     {
         Dissappear(0);
         OnAppear(2);
+        players[0].SetActive(true);
+        players[1].SetActive(true);
     }
 
     public void OffHow()
     {
         Dissappear(2);
         OnAppear(0);
+        players[0].SetActive(false);
+        players[1].SetActive(false);
     }
 
     public void OnGallery()
