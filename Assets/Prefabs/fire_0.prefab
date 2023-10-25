@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7260578021903464917}
   - component: {fileID: 5095768198655105090}
   - component: {fileID: 1393474109696837153}
+  - component: {fileID: 2997460287078813848}
   m_Layer: 0
   m_Name: fire_0
   m_TagString: Dead
@@ -110,7 +111,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5000029867096351042}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -119,3 +120,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.13}
   serializedVersion: 2
   m_Radius: 0.26
+--- !u!70 &2997460287078813848
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000029867096351042}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.017213335, y: -0.14958128}
+  m_Size: {x: 0.38794786, y: 0.59083754}
+  m_Direction: 0

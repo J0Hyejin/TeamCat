@@ -11,7 +11,7 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         if (!PlayerPrefs.HasKey("volume"))
-            volume = 1;
+            volume = 0.5f;
         else
             volume = PlayerPrefs.GetFloat("volume");
         slider.value = volume;
